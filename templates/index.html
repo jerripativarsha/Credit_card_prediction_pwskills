@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PW Skills Project </title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center; 
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin-left: auto; 
+            margin-right: auto;
+            text-align: left; 
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>'PW Skills' Project for Internship</h2>
+    <h1>Credit Card Default Prediction 💳</h1>
+    
+    <form action="/predict" method="post">
+        <table>
+            <tr>
+                <th><label for="LIMIT_BAL">LIMIT_BAL:</label></th>
+                <td><input type="text" id="LIMIT_BAL" name="LIMIT_BAL" required></td>
+                <th><label for="SEX">SEX:</label></th>
+                <td>
+                    <select id="SEX" name="SEX" required>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="EDUCATION">EDUCATION:</label></th>
+                <td>
+                    <select id="EDUCATION" name="EDUCATION" required>
+                        <option value="1">Graduate School</option>
+                        <option value="2">University</option>
+                        <option value="3">High School</option>
+                        <option value="4">Others</option>
+                    </select>
+                </td>
+                <th><label for="MARRIAGE">MARRIAGE:</label></th>
+                <td>
+                    <select id="MARRIAGE" name="MARRIAGE" required>
+                        <option value="1">Married</option>
+                        <option value="2">Single</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="AGE">AGE:</label></th>
+                <td><input type="text" id="AGE" name="AGE" required></td>
+                <th><label for="PAY_0">PAY_0:</label></th>
+                <td><input type="text" id="PAY_0" name="PAY_0" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_2">PAY_2:</label></th>
+                <td><input type="text" id="PAY_2" name="PAY_2" required></td>
+                <th><label for="PAY_3">PAY_3:</label></th>
+                <td><input type="text" id="PAY_3" name="PAY_3" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_4">PAY_4:</label></th>
+                <td><input type="text" id="PAY_4" name="PAY_4" required></td>
+                <th><label for="PAY_5">PAY_5:</label></th>
+                <td><input type="text" id="PAY_5" name="PAY_5" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_6">PAY_6:</label></th>
+                <td><input type="text" id="PAY_6" name="PAY_6" required></td>
+                <th><label for="BILL_AMT1">BILL_AMT1:</label></th>
+                <td><input type="text" id="BILL_AMT1" name="BILL_AMT1" required></td>
+            </tr>
+            <tr>
+                <th><label for="BILL_AMT2">BILL_AMT2:</label></th>
+                <td><input type="text" id="BILL_AMT2" name="BILL_AMT2" required></td>
+                <th><label for="BILL_AMT3">BILL_AMT3:</label></th>
+                <td><input type="text" id="BILL_AMT3" name="BILL_AMT3" required></td>
+            </tr>
+            <tr>
+                <th><label for="BILL_AMT4">BILL_AMT4:</label></th>
+                <td><input type="text" id="BILL_AMT4" name="BILL_AMT4" required></td>
+                <th><label for="BILL_AMT5">BILL_AMT5:</label></th>
+                <td><input type="text" id="BILL_AMT5" name="BILL_AMT5" required></td>
+            </tr>
+            <tr>
+                <th><label for="BILL_AMT6">BILL_AMT6:</label></th>
+                <td><input type="text" id="BILL_AMT6" name="BILL_AMT6" required></td>
+                <th><label for="PAY_AMT1">PAY_AMT1:</label></th>
+                <td><input type="text" id="PAY_AMT1" name="PAY_AMT1" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_AMT2">PAY_AMT2:</label></th>
+                <td><input type="text" id="PAY_AMT2" name="PAY_AMT2" required></td>
+                <th><label for="PAY_AMT3">PAY_AMT3:</label></th>
+                <td><input type="text" id="PAY_AMT3" name="PAY_AMT3" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_AMT4">PAY_AMT4:</label></th>
+                <td><input type="text" id="PAY_AMT4" name="PAY_AMT4" required></td>
+                <th><label for="PAY_AMT5">PAY_AMT5:</label></th>
+                <td><input type="text" id="PAY_AMT5" name="PAY_AMT5" required></td>
+            </tr>
+            <tr>
+                <th><label for="PAY_AMT6">PAY_AMT6:</label></th>
+                <td><input type="text" id="PAY_AMT6" name="PAY_AMT6" required></td>
+            </tr>
+        </table>
+
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+    
+    <p class="footer">©2023 Siddharth Singh Rakwal</p>
+
+</body>
+</html>
